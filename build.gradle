@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.postgresql:postgresql:42.0.0'
+        classpath 'org.flywaydb:flyway-gradle-plugin:3.1'
+    }
+}
+apply plugin: 'flyway'
+
+flyway {
+    url = 'jdbc:postgresql://localhost:5432/petHotel'
+    user = 'petHotelUser'
+    password = 'petHotel'
+    schemas = ['pethotel']
+    table = 'schema_history'
+    locations = ['filesystem:db/migrations']
+}
