@@ -8,12 +8,8 @@ buildscript {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.0'
-}
-
 apply plugin: 'flyway'
-
+ 
 flyway {
     url = 'jdbc:postgresql://localhost:5432/petHotel'
     user = 'petHotelUser'
