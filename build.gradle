@@ -19,6 +19,6 @@ flyway {
     user = 'petHotelUser'
     password = 'petHotel'
     schemas = ['pethotel']
-    table = 'schema_history' 
+    table = 'schema_history'
     locations = ['filesystem:db/migrations']
 }
